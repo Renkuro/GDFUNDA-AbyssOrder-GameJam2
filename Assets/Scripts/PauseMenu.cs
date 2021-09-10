@@ -6,13 +6,14 @@ public class PauseMenu : MonoBehaviour
 {
 
     [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject game_panel;
     [SerializeField] private GameObject player;
-    private bool isPaused = false;
 
     // Start is called before the first frame update
     void Start()
     {
         panel.SetActive(false);
+        game_panel.SetActive(true);
         player.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -24,24 +25,14 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused == true)
-            {
-                Time.timeScale = 1;
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;               
-                panel.SetActive(false);
-                player.SetActive(true);
-                isPaused = false;
-            }
-            else
-            {
-                Time.timeScale = 0;
-                Cursor.lockState = CursorLockMode.Confined;
-                Cursor.visible = true;               
-                panel.SetActive(true);
-                player.SetActive(false);
-                isPaused = true;
-            }
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            panel.SetActive(true);
+            game_panel.SetActive(false);
+            player.SetActive(false);
         }
     }
+
+
 }
