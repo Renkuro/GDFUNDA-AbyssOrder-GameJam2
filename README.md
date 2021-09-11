@@ -1,8 +1,7 @@
 # GDFUNDA-AbyssOrder-GameJam2
-## Game Title: 
-## Team Name: 
-Abyss Order
+## Section: S12 
 ## Members:
 - CHUA CHIACO, Ronn Christian C.
 - RAMOS, Elderwell S.
 - TAN, Darren P.
+## Starting Scene: 
