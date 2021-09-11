@@ -21,10 +21,11 @@ public class GameHUD : MonoBehaviour
     }
 
     //add points when player kills zombie
-    void addPointsEvent ()
+    void addPointsEvent (Parameters param)
     {
+        int pts_add = param.GetIntExtra(EventNames.Game_Events.ZOMBIE_POINTS, 100);
         int pts = int.Parse(scoreVal.GetComponent<UnityEngine.UI.Text>().text);
-        pts = pts + 100;
+        pts = pts + pts_add;
         scoreVal.GetComponent<UnityEngine.UI.Text>().text = pts.ToString();
 
     }

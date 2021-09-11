@@ -3,6 +3,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     [SerializeField] private float health;
+    [SerializeField] private int points;
 
     //when zombie takes damage
     public void TakeDamage(float amount)
@@ -16,7 +17,9 @@ public class Target : MonoBehaviour
 
         void Die()
         {
-            EventBroadcaster.Instance.PostEvent(EventNames.Game_Events.ADD_POINTS);
+            Parameters param = new Parameters();
+            param.PutExtra(EventNames.Game_Events.ZOMBIE_POINTS, points);
+            EventBroadcaster.Instance.PostEvent(EventNames.Game_Events.ADD_POINTS, param);
             Destroy(gameObject);
         }
     }

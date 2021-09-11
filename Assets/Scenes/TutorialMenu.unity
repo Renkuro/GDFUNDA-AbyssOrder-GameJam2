@@ -599,8 +599,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000081062, y: -36}
-  m_SizeDelta: {x: 949.4684, y: 369.756}
+  m_AnchoredPosition: {x: 1.1271, y: -61.9228}
+  m_SizeDelta: {x: 951.7225, y: 421.6015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662872386
 MonoBehaviour:
@@ -640,8 +640,8 @@ MonoBehaviour:
     are a lotta zombies out there - normal ones, fast ones, and even beefy ones.
     Your job is to kill every single one of them else your entire family suffers
     the same zombified fate if 3 of those things manage to get inside your home.\n\nControls:
-    \nESC/P - Pause/Resume\nW,A,S,D - Forward, Left, Backward, and Right Movement\nMouse
-    - Aim\nMouse Button 1 - Shoot\nSpacebar - Jump\nShift (Hold) - Sprint\n\n"
+    \nESC/P - Pause\nW,A,S,D - Forward, Left, Backward, and Right Movement\nMouse
+    - Aim\nMouse Button 1 - Shoot\nShift (Hold) - Sprint\n\n"
 --- !u!222 &662872387
 CanvasRenderer:
   m_ObjectHideFlags: 0
