@@ -1,2 +1,8 @@
 # GDFUNDA-AbyssOrder-GameJam2
-Group Abyss Order's submission for the second game jam project of GDFUNDA S12.
+## Game Title: 
+## Team Name: 
+Abyss Order
+## Members:
+- CHUA CHIACO, Ronn Christian C.
+- RAMOS, Elderwell S.
+- TAN, Darren P.
