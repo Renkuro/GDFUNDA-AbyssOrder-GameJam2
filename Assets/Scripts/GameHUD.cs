@@ -26,6 +26,11 @@ public class GameHUD : MonoBehaviour
         int pts_add = param.GetIntExtra(EventNames.Game_Events.ZOMBIE_POINTS, 100);
         int pts = int.Parse(scoreVal.GetComponent<UnityEngine.UI.Text>().text);
         pts = pts + pts_add;
+
+        Parameters stuff = new Parameters();
+        stuff.PutExtra(EventNames.Game_Events.CURR_POINTS, pts);
+        EventBroadcaster.Instance.PostEvent(EventNames.Game_Events.GAME_HARDER, stuff);
+
         scoreVal.GetComponent<UnityEngine.UI.Text>().text = pts.ToString();
 
     }
@@ -38,9 +43,7 @@ public class GameHUD : MonoBehaviour
         print("HP " + hp.ToString());
         if (hp == 0)
         {
-            print("nice");
             EventBroadcaster.Instance.PostEvent(EventNames.Game_Events.DEATH_SCREEN);
-
         }
             
         lifeVal.GetComponent<UnityEngine.UI.Text>().text = hp.ToString();

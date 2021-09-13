@@ -9,7 +9,9 @@ public class SpawnZombie : MonoBehaviour
     [SerializeField] private GameObject z_fast;
     [SerializeField] private GameObject z_boss;
     [SerializeField] private float spawn_interval;
+    [SerializeField] private float point_threshold;
     private float ticks = 0.0f;
+    private float initial_interval;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,13 @@ public class SpawnZombie : MonoBehaviour
         this.z_norm.SetActive(false);
         this.z_fast.SetActive(false);
         this.z_boss.SetActive(false);
+        this.initial_interval = this.spawn_interval;
+        EventBroadcaster.Instance.AddObserver(EventNames.Game_Events.GAME_HARDER, this.harderEvent);
+    }
+
+    void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver(EventNames.Game_Events.GAME_HARDER);
     }
 
     // Update is called once per frame
@@ -26,7 +35,7 @@ public class SpawnZombie : MonoBehaviour
         if (this.ticks >= spawn_interval)
         {
             this.ticks = 0.0f;
-            int picker = Random.Range(0, 11);
+            int picker = Random.Range(0, 16);
             GameObject zombie;
             switch (picker)
             {
@@ -35,6 +44,7 @@ public class SpawnZombie : MonoBehaviour
                     break;
                 case 1:
                 case 2:
+                case 3:
                     zombie = GameObject.Instantiate(this.z_boss, this.target.transform);
                     break;
                 default:
@@ -49,5 +59,16 @@ public class SpawnZombie : MonoBehaviour
             zombie.transform.localPosition = pos;
         }
         
+    }
+
+    private void harderEvent (Parameters param)
+    {
+        int pts = param.GetIntExtra(EventNames.Game_Events.CURR_POINTS, 0);
+        this.spawn_interval = initial_interval - (pts / point_threshold);
+        if (this.spawn_interval < 1f)
+        {
+            this.spawn_interval = 1f;
+        }
+        print("changed: " + spawn_interval);
     }
 }

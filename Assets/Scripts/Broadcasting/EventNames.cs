@@ -57,6 +57,8 @@ public class EventNames {
 		public const string ADD_POINTS = "ADD_POINTS";
 		public const string DEATH_SCREEN = "DEATH_SCREEN";
 		public const string ZOMBIE_POINTS = "ZOMBIE_POINTS";
+		public const string GAME_HARDER = "GAME_HARDER";
+		public const string CURR_POINTS = "CURR_POINTS";
     }
 }
 

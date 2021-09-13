@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3134095, g: 0.33917505, b: 0.38173535, a: 1}
+  m_IndirectSpecularColor: {r: 0.31340948, g: 0.33917502, b: 0.38173518, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17312,6 +17312,10 @@ PrefabInstance:
     - target: {fileID: 5204286679362298894, guid: 8e2afe89939a2e6439acb97481ebc507, type: 3}
       propertyPath: m_MouseLook.lockCursor
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204286679364936750, guid: 8e2afe89939a2e6439acb97481ebc507, type: 3}
+      propertyPath: m_Height
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2045917199495635295, guid: 8e2afe89939a2e6439acb97481ebc507, type: 3}
@@ -37619,7 +37623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3601f73035fe589469f3fe520db97534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 800
+  health: 750
   points: 500
 --- !u!65 &1024173456
 BoxCollider:
@@ -54566,7 +54570,8 @@ MonoBehaviour:
   z_norm: {fileID: 2074751447}
   z_fast: {fileID: 2044377983}
   z_boss: {fileID: 1024173452}
-  spawn_interval: 3.5
+  spawn_interval: 4.5
+  point_threshold: 2500
 --- !u!1001 &1170771226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66695,13 +66700,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6eb0c42497e1a18438966f05b5888df9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -81210,7 +81215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3601f73035fe589469f3fe520db97534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 90
+  health: 75
   points: 200
 --- !u!114 &2044377986
 MonoBehaviour:
@@ -82381,7 +82386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3601f73035fe589469f3fe520db97534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 150
+  health: 125
   points: 100
 --- !u!43 &2074756849
 Mesh:

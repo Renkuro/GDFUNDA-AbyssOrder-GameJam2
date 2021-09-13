@@ -638,10 +638,11 @@ MonoBehaviour:
   m_Text: "A contagious virus is spreading everywhere and it's turning everybody
     into zombies! Well, good thing you're an army veteran armed with a gun. There
     are a lotta zombies out there - normal ones, fast ones, and even beefy ones.
-    Your job is to kill every single one of them else your entire family suffers
-    the same zombified fate if 3 of those things manage to get inside your home.\n\nControls:
-    \nESC/P - Pause\nW,A,S,D - Forward, Left, Backward, and Right Movement\nMouse
-    - Aim\nMouse Button 1 - Shoot\nShift (Hold) - Sprint\n\n"
+    The more zombies you kill means that there's more to fight. Your job is to kill
+    every single one of them else your entire family suffers the same zombified fate
+    if 3 of those things manage to get inside your home.\n\nControls: \nESC/P - Pause\nW,A,S,D
+    - Forward, Left, Backward, and Right Movement\nMouse - Aim\nMouse Button 1 -
+    Shoot\nShift (Hold) - Sprint\n\n"
 --- !u!222 &662872387
 CanvasRenderer:
   m_ObjectHideFlags: 0
